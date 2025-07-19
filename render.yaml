@@ -2,9 +2,7 @@ services:
   - type: web
     name: laptop-price-predictor
     env: python
-    buildCommand: |
-      apt-get update && apt-get install -y gfortran build-essential
-      pip install --upgrade pip setuptools wheel
-      pip install -r requirements.txt
+    buildCommand: | 
+      apt-get update && apt-get install -y gfortran build-essential pip install --upgrade pip setuptools wheel pip install -r requirements.txt
     startCommand: streamlit run app.py
     pythonVersion: 3.8.0
